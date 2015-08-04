@@ -1,0 +1,40 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="application.workOrderList" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Change Work Orders">
+		<content>
+      <FlexBox alignItems="Start">
+        <items>
+          <Input type="Text" placeholder="Enter Work Order Number" value="{newWorkOrder>/workOrderNumber}">
+            <layoutData>
+              <FlexItemData growFactor="100"/>
+            </layoutData>
+          </Input>
+          <Button text="View Work Order" press="onReadNewWorkOrderPress" class="viewWorkOrderButton">
+            <layoutData>
+              <FlexItemData growFactor="1"/>
+            </layoutData>
+          </Button>
+        </items>
+      </FlexBox>
+      <Panel expandable="true" expanded="true">
+        <headerToolbar>
+          <Toolbar height="3rem">
+              <Text text="Viewed Work Orders"/>
+          </Toolbar>
+        </headerToolbar>
+        <content>
+          <List items="{workOrderList>/data}" noDataText="No viewed Work Orders">
+            <items>
+              <ObjectListItem title="{workOrderList>customerName}" type="Active" press="onViewWorkOrderPress">
+              </ObjectListItem>
+            </items>
+          </List>
+        </content>
+      </Panel>
+    </content>
+		<footer>
+      <Toolbar>
+      </Toolbar>
+    </footer>
+	</Page>
+</core:View>
