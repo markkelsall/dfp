@@ -6,7 +6,8 @@ var bootstrap = {
 			[
         "js.utils.Logger",
 			 	"js.utils.EAO",
-			 	"js.utils.Navigation"
+			 	"js.utils.Navigation",
+				"js.model.data"
       ],
 
 	    eaoEndpoints :

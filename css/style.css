@@ -1,3 +1,9 @@
+/* shared space with viewWorkOrderButton */
+.inputNewWorkOrder {
+  margin-left: 0.5rem;
+}
+
+/* shared space with inputNewWorkOrder */
 .viewWorkOrderButton {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }

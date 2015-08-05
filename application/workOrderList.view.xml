@@ -4,7 +4,7 @@
 		<content>
       <FlexBox alignItems="Start">
         <items>
-          <Input type="Text" placeholder="Enter Work Order Number" value="{newWorkOrder>/workOrderNumber}">
+          <Input type="Text" placeholder="Enter Work Order Number" value="{newWorkOrder>/workOrderNumber}" class="inputNewWorkOrder">
             <layoutData>
               <FlexItemData growFactor="100"/>
             </layoutData>
@@ -25,7 +25,7 @@
         <content>
           <List items="{workOrderList>/data}" noDataText="No viewed Work Orders">
             <items>
-              <ObjectListItem title="{workOrderList>customerName}" type="Active" press="onViewWorkOrderPress">
+              <ObjectListItem title="{workOrderList>shortText}" number="{workOrderList>workOrderNumber}" type="Active" press="onViewWorkOrderPress">
               </ObjectListItem>
             </items>
           </List>
