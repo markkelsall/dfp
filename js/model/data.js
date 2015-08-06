@@ -12,12 +12,14 @@ var referenceData = {
       damage : "damage1",
       confirmedTime : [
         {
-          unit : "day",
+          workCentre : "Work Ctr1",
+          unit : "day(s)",
           duration : "1",
           date : "19/05/2015"
         },
         {
-          unit : "day",
+          workCentre : "Work Ctr2",
+          unit : "day(s)",
           duration : "2",
           date : "19/05/2015"
         }
@@ -47,13 +49,41 @@ var referenceData = {
       ]
     }
   },
-  "objectParts" : [
+  objectParts : [
+    {
+      id : "0",
+      text : "Object Part"
+    },
+    {
+      id : "1",
+      text : "Part 1"
+    },
+    {
+      id : "2",
+      text : "Part 2"
+    },
+    {
+      id : ""
+    }
+  ],
+  causeCodes : [
 
   ],
-  "causeCodes" : [
+  damage : [
 
   ],
-  "damage" : [
-
+  units : [
+    {
+      id : "1",
+      text : "Unit"
+    },
+    {
+      id : "2",
+      text : "Hour(s)"
+    },
+    {
+      id : "3",
+      text : "Day(s)"
+    }
   ]
 }

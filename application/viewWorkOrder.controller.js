@@ -48,5 +48,17 @@ sap.ui.controller("application.viewWorkOrder", {
 		//save it to the current work order
 		var jCurrentWorkOrder = new sap.ui.model.json.JSONModel(oResponse.data);
 		sap.ui.getCore().setModel(jCurrentWorkOrder, "currentWorkOrder");
+	},
+
+	onAddConfirmTimePress : function () {
+
+	},
+
+	onSaveWorkOrderPress : function () {
+
+	},
+	
+	onTechnicallyCompleteWorkOrderPress : function () {
+
 	}
 });

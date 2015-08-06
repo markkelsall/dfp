@@ -6,13 +6,6 @@ sap.ui.controller("application.workOrderList", {
 		//initialise the newWorkOrder model
 		var jNewWorkOrder = new sap.ui.model.json.JSONModel({workOrderNumber : ""});
 		sap.ui.getCore().setModel(jNewWorkOrder, "newWorkOrder");
-
-		//initialise the workOrderList model
-		var oWorkOrderList = {
-			data : []
-		};
-		var jWorkOrderList = new sap.ui.model.json.JSONModel(oWorkOrderList);
-		sap.ui.getCore().setModel(jWorkOrderList, "workOrderList");
   },
 
   onViewWorkOrderPress : function (e) {

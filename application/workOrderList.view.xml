@@ -16,7 +16,7 @@
           </Button>
         </items>
       </FlexBox>
-      <Panel expandable="true" expanded="true">
+      <Panel>
         <headerToolbar>
           <Toolbar height="3rem">
               <Text text="Viewed Work Orders"/>

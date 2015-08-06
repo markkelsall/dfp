@@ -14,9 +14,56 @@
       		<ObjectStatus text="Plant: {currentWorkOrder>/plant}" state="None"/>
     		</statuses>
 			</ObjectHeader>
+			<HBox>
+        <items>
+					<Label text="Object Part" class="inputLabel"/>
+					<Select items="{objectParts>/data}">
+          	<core:Item key="{objectParts>id}" text="{objectParts>name}"/>
+        	</Select>
+					<Label text="Cause code" class="inputLabel"/>
+					<Select items="{causeCodes>/data}">
+          	<core:Item key="{causeCodes>id}" text="{causeCodes>name}"/>
+        	</Select>
+				</items>
+			</HBox>
+			<HBox>
+        <items>
+					<Label text="Damage" class="inputLabel"/>
+					<Select items="{damage>/data}">
+          	<core:Item key="{damage>id}" text="{damage>name}"/>
+        	</Select>
+					<Label text="Breakdown duration" class="inputLabel"/>
+					<Input placeholder="time" class="inputElement"/>
+					<Select items="{units>/data}" class="unitsSelect">
+          	<core:Item key="{units>id}" text="{units>text}"/>
+        	</Select>
+				</items>
+			</HBox>
+			<Panel>
+				<headerToolbar>
+          <Toolbar height="3rem">
+            <Text text="Confirmed time"/>
+          </Toolbar>
+				</headerToolbar>
+				<content>
+					<List items="{currentWorkOrder>/confirmedTime}" noDataText="No confirmed time">
+	          <items>
+	            <ObjectListItem title="{currentWorkOrder>workCentre}" number="{currentWorkOrder>duration} {currentWorkOrder>unit}">
+								<attributes>
+        					<ObjectAttribute text="{currentWorkOrder>date}"/>
+        				</attributes>
+	            </ObjectListItem>
+	          </items>
+	        </List>
+				</content>
+			</Panel>
     </content>
 		<footer>
       <Toolbar>
+				<ToolbarSpacer/>
+        <Button text="Add time" press="onAddConfirmTimePress" type="Emphasized"/>
+        <Button text="Save" press="onSaveWorkOrderPress"/>
+				<Button text="Technically Complete" press="onTechnicallyCompleteWorkOrderPress" type="Accept"/>
       </Toolbar>
     </footer>
 	</Page>
