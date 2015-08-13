@@ -1,6 +1,14 @@
 sap.ui.controller("application.main", {
 
 	onInit: function() {
+
+		$.sap.require("sap.ui.unified.Calendar");
+    $.sap.require("sap.ui.unified.DateRange");
+    $.sap.require("sap.ui.unified.CalendarRenderer");
+		$.sap.require("sap.ui.unified.calendar.HeaderRenderer");
+		$.sap.require("sap.ui.unified.calendar.MonthRenderer");
+		$.sap.require("sap.ui.unified.calendar.MonthPickerRenderer");
+
 		this.getView().setDisplayBlock(true);
 		mainController = this;
 

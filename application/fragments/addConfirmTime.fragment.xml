@@ -1,0 +1,41 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Dialog title="Confirm time" class="sapUiPopupWithPadding">
+    <content>
+      <HBox>
+        <items>
+          <Label text="Actual Worked" class="confirmTimeFragmentInputLabel"/>
+          <Input placeholder="time" value="{editConfirmTime>/duration}" valueState="{editConfirmTimeState>/duration}"/>
+					<Select selectedKey="{editConfirmTime>/durationUnit}" items="{units>/data}" class="unitsSelect" valueState="{editConfirmTimeState>/durationUnit}">
+          	<core:Item key="{units>id}" text="{units>text}"/>
+        	</Select>
+        </items>
+      </HBox>
+      <HBox>
+        <items>
+          <Label text="Post Date" class="confirmTimeFragmentInputLabel"/>
+          <DatePicker placeholder="Enter Date" valueFormat="MMM dd, yy" value="{path:'editConfirmTime>/postDate', type:'sap.ui.model.type.Date'}"
+             class="confirmTimeFragmentInput" valueState="{editConfirmTimeState>/postDate}"/>
+        </items>
+      </HBox>
+      <HBox>
+        <items>
+          <Label text="Confirmation text" class="confirmTimeFragmentInputLabel"/>
+          <Input valueState="{editConfirmTimeState>/confirmationText}" placeholder="Confirmation text"
+            value="{editConfirmTime>/confirmationText}" class="confirmTimeFragmentInput"/>
+        </items>
+      </HBox>
+      <HBox>
+        <items>
+          <Label text="Work Centre" class="confirmTimeFragmentInputLabel"/>
+          <Label text="{currentWorkOrder>/workCentre}" class="confirmTimeFragmentInputLabel"/>
+        </items>
+      </HBox>
+    </content>
+    <beginButton>
+      <Button text="Cancel" press="onAddCancelPress"/>
+    </beginButton>
+    <endButton>
+      <Button text="Confirm" press="onAddConfirmPress"/>
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>

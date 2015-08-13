@@ -17,24 +17,24 @@
 			<HBox>
         <items>
 					<Label text="Object Part" class="inputLabel"/>
-					<Select items="{objectParts>/data}">
-          	<core:Item key="{objectParts>id}" text="{objectParts>name}"/>
+					<Select selectedKey="{currentWorkOrder>/objectPart}" items="{objectParts>/data}" class="selectElements">
+          	<core:Item key="{objectParts>id}" text="{objectParts>text}"/>
         	</Select>
 					<Label text="Cause code" class="inputLabel"/>
-					<Select items="{causeCodes>/data}">
-          	<core:Item key="{causeCodes>id}" text="{causeCodes>name}"/>
+					<Select selectedKey="{currentWorkOrder>/causeCode}" items="{causeCodes>/data}" class="selectElements">
+          	<core:Item key="{causeCodes>id}" text="{causeCodes>text}"/>
         	</Select>
 				</items>
 			</HBox>
 			<HBox>
         <items>
 					<Label text="Damage" class="inputLabel"/>
-					<Select items="{damage>/data}">
-          	<core:Item key="{damage>id}" text="{damage>name}"/>
+					<Select selectedKey="{currentWorkOrder>/damage}" items="{damage>/data}" class="selectElements">
+          	<core:Item key="{damage>id}" text="{damage>text}"/>
         	</Select>
 					<Label text="Breakdown duration" class="inputLabel"/>
-					<Input placeholder="time" class="inputElement"/>
-					<Select items="{units>/data}" class="unitsSelect">
+					<Input placeholder="time" class="inputElement" value="{currentWorkOrder>/breakdownDuration}"/>
+					<Select selectedKey="{currentWorkOrder>/breakdownDurationUnit}" items="{units>/data}" class="unitsSelect">
           	<core:Item key="{units>id}" text="{units>text}"/>
         	</Select>
 				</items>

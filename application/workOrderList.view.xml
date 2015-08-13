@@ -32,9 +32,5 @@
         </content>
       </Panel>
     </content>
-		<footer>
-      <Toolbar>
-      </Toolbar>
-    </footer>
 	</Page>
 </core:View>

@@ -7,9 +7,11 @@ var referenceData = {
       companyCode : "CC01",
       plant : "PL01",
       longText : "long texttttttttt",
-      objectPart : "objPart1",
-      causeCode : "causeCode1",
-      damage : "damage1",
+      objectPart : "op1",
+      causeCode : "cc2",
+      damage : "d1",
+      breakdownDuration : "2",
+      breakdownDurationUnit : "u2",
       confirmedTime : [
         {
           workCentre : "Work Ctr1",
@@ -32,9 +34,9 @@ var referenceData = {
       companyCode : "CC01",
       plant : "PL01",
       longText : "really really long text",
-      objectPart : "objPart1",
-      causeCode : "causeCode1",
-      damage : "damage1",
+      objectPart : "op2",
+      causeCode : "cc2",
+      damage : "d2",
       confirmedTime : [
         {
           unit : "day",
@@ -51,38 +53,61 @@ var referenceData = {
   },
   objectParts : [
     {
-      id : "0",
+      id : "op0",
       text : "Object Part"
     },
     {
-      id : "1",
+      id : "op1",
       text : "Part 1"
     },
     {
-      id : "2",
+      id : "op2",
       text : "Part 2"
     },
     {
-      id : ""
+      id : "op3",
+      text : "Part 3"
     }
   ],
   causeCodes : [
-
+    {
+      id : "cc0",
+      text : "Cause Codes"
+    },
+    {
+      id : "cc1",
+      text : "Cause Code 1"
+    },
+    {
+      id : "cc2",
+      text : "Cause Code 2"
+    }
   ],
   damage : [
-
+    {
+      id : "d0",
+      text : "Damage 1"
+    },
+    {
+      id : "d1",
+      text : "Damage 2"
+    },
+    {
+      id : "d2",
+      text : "Damage 3"
+    }
   ],
   units : [
     {
-      id : "1",
+      id : "u1",
       text : "Unit"
     },
     {
-      id : "2",
+      id : "u2",
       text : "Hour(s)"
     },
     {
-      id : "3",
+      id : "u3",
       text : "Day(s)"
     }
   ]
