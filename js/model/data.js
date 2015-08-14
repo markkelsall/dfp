@@ -17,13 +17,13 @@ var referenceData = {
           workCentre : "Work Ctr1",
           unit : "day(s)",
           duration : "1",
-          date : "19/05/2015"
+          dateString : "19/05/2015"
         },
         {
           workCentre : "Work Ctr2",
           unit : "day(s)",
           duration : "2",
-          date : "19/05/2015"
+          dateString : "19/05/2015"
         }
       ]
     },
@@ -39,14 +39,16 @@ var referenceData = {
       damage : "d2",
       confirmedTime : [
         {
-          unit : "day",
-          duration : "1",
-          date : "19/05/2015"
+          workCentre : "Work Ctr2",
+          unit : "hour(s)",
+          duration : "5",
+          dateString : "23/07/2015"
         },
         {
-          unit : "day",
-          duration : "2",
-          date : "19/05/2015"
+          workCentre : "Work Ctr3",
+          unit : "hour(s)",
+          duration : "4",
+          dateString : "23/07/2015"
         }
       ]
     }

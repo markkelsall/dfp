@@ -5,7 +5,7 @@
         <items>
           <Label text="Actual Worked" class="confirmTimeFragmentInputLabel"/>
           <Input placeholder="time" value="{editConfirmTime>/duration}" valueState="{editConfirmTimeState>/duration}"/>
-					<Select selectedKey="{editConfirmTime>/durationUnit}" items="{units>/data}" class="unitsSelect" valueState="{editConfirmTimeState>/durationUnit}">
+					<Select id="durationUnit" selectedKey="{editConfirmTime>/unitId}" items="{units>/data}" class="unitsSelect">
           	<core:Item key="{units>id}" text="{units>text}"/>
         	</Select>
         </items>
@@ -13,8 +13,8 @@
       <HBox>
         <items>
           <Label text="Post Date" class="confirmTimeFragmentInputLabel"/>
-          <DatePicker placeholder="Enter Date" valueFormat="MMM dd, yy" value="{path:'editConfirmTime>/postDate', type:'sap.ui.model.type.Date'}"
-             class="confirmTimeFragmentInput" valueState="{editConfirmTimeState>/postDate}"/>
+          <DatePicker placeholder="Enter Date" valueFormat="MMM dd, yy" value="{path:'editConfirmTime>/date', type:'sap.ui.model.type.Date'}"
+             class="confirmTimeFragmentInput" valueState="{editConfirmTimeState>/date}"/>
         </items>
       </HBox>
       <HBox>

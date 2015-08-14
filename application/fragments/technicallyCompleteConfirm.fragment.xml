@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog title="Technically Complete" class="sapUiPopupWithPadding">
+        <content>
+          <Label text="Submit new customer request for approval?"/>
+        </content>
+        <beginButton>
+            <Button text="Cancel" press="onTechnicallyCompleteCancelPress"/>
+        </beginButton>
+        <endButton>
+            <Button text="OK" press="onTechnicallyCompleteConfirmPress"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

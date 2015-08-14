@@ -38,3 +38,7 @@
 .confirmTimeFragmentInput {
   width: 18.6rem !important;
 }
+
+.durationUnitErrorState {
+  border: 2px red solid;
+}

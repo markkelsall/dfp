@@ -17,11 +17,11 @@
 			<HBox>
         <items>
 					<Label text="Object Part" class="inputLabel"/>
-					<Select selectedKey="{currentWorkOrder>/objectPart}" items="{objectParts>/data}" class="selectElements">
+					<Select selectedKey="{currentWorkOrder>/objectPart}" items="{objectParts>/data}" class="selectElements" enabled="false">
           	<core:Item key="{objectParts>id}" text="{objectParts>text}"/>
         	</Select>
 					<Label text="Cause code" class="inputLabel"/>
-					<Select selectedKey="{currentWorkOrder>/causeCode}" items="{causeCodes>/data}" class="selectElements">
+					<Select selectedKey="{currentWorkOrder>/causeCode}" items="{causeCodes>/data}" class="selectElements" enabled="false">
           	<core:Item key="{causeCodes>id}" text="{causeCodes>text}"/>
         	</Select>
 				</items>
@@ -29,12 +29,12 @@
 			<HBox>
         <items>
 					<Label text="Damage" class="inputLabel"/>
-					<Select selectedKey="{currentWorkOrder>/damage}" items="{damage>/data}" class="selectElements">
+					<Select selectedKey="{currentWorkOrder>/damage}" items="{damage>/data}" class="selectElements" enabled="false">
           	<core:Item key="{damage>id}" text="{damage>text}"/>
         	</Select>
 					<Label text="Breakdown duration" class="inputLabel"/>
-					<Input placeholder="time" class="inputElement" value="{currentWorkOrder>/breakdownDuration}"/>
-					<Select selectedKey="{currentWorkOrder>/breakdownDurationUnit}" items="{units>/data}" class="unitsSelect">
+					<Input placeholder="time" class="inputElement" value="{currentWorkOrder>/breakdownDuration}" enabled="false"/>
+					<Select selectedKey="{currentWorkOrder>/breakdownDurationUnit}" items="{units>/data}" class="unitsSelect" enabled="false">
           	<core:Item key="{units>id}" text="{units>text}"/>
         	</Select>
 				</items>
@@ -50,7 +50,7 @@
 	          <items>
 	            <ObjectListItem title="{currentWorkOrder>workCentre}" number="{currentWorkOrder>duration} {currentWorkOrder>unit}">
 								<attributes>
-        					<ObjectAttribute text="{currentWorkOrder>date}"/>
+        					<ObjectAttribute text="{currentWorkOrder>dateString}"/>
         				</attributes>
 	            </ObjectListItem>
 	          </items>
