@@ -8,26 +8,24 @@
   margin-left: 0.5rem;
 }
 
-.inputElement {
-  margin-right:1rem;
-}
-
 .inputLabel {
-  width: 16rem;
-  margin-left: 1.5rem;
   padding-top: 1rem;
 }
 
 .unitsSelect {
-  margin-left: 1rem;
+  width: 9.1rem !important;
 }
 
 .selectElements {
-  width: 19.7rem !important;
+  width: 15rem !important;
 }
 
 .sapMPanelContent {
   padding:0rem !important;
+}
+
+.sapUiRespGrid.sapUiRespGridVSpace1>div {
+  margin-bottom:0.5rem !important;
 }
 
 .confirmTimeFragmentInputLabel {

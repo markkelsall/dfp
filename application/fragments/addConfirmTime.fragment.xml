@@ -27,7 +27,7 @@
       <HBox>
         <items>
           <Label text="Work Centre" class="confirmTimeFragmentInputLabel"/>
-          <Label text="{currentWorkOrder>/workCentre}" class="confirmTimeFragmentInputLabel"/>
+          <Input placeholder="Work Centre" value="{editConfirmTime>/workCentre}" valueState="{editConfirmTimeState>/workCentre}"/>
         </items>
       </HBox>
     </content>
