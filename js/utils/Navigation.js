@@ -53,7 +53,7 @@ Navigation.prototype.navigate = function (sToDivId, sFromDivId, oController, oDa
  */
 Navigation.prototype.toMasterPage = function (sView, oData, sTransitionName) {
 	//check to see if sView already exists in the DOM by replacing . with _
-	var sId = Util.replaceAllInString(sView, ".", "_");
+	var sId = this.replaceAllInString(sView, ".", "_");
 	var view = sap.ui.getCore().byId(sId);
 
 	if (view === undefined) {
@@ -87,7 +87,7 @@ Navigation.prototype.toMasterPage = function (sView, oData, sTransitionName) {
  */
 Navigation.prototype.toDetailPage = function (sView, oData, sTransitionName) {
 	//check to see if sView already exists in the DOM by replacing . with _
-	var sId = Util.replaceAllInString(sView, ".", "_");
+	var sId = this.replaceAllInString(sView, ".", "_");
 	var view = sap.ui.getCore().byId(sId);
 
 	if (view === undefined) {
