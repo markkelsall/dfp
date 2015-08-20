@@ -18,58 +18,60 @@
 			</ObjectHeader>
 			<layout:Grid hSpacing="1">
 				<layout:content>
-					<Label text="Object Part" class="inputLabel">
-						<layoutData>
-          		<layout:GridData span="L3 M4 S12" linebreakS="true"/>
-        		</layoutData>
-					</Label>
-					<Select selectedKey="{currentWorkOrder>/objectPart}" items="{objectParts>/data}" class="selectElements">
-						<layoutData>
-          		<layout:GridData span="L3 M7 S12" linebreakS="true"/>
-        		</layoutData>
-          	<core:Item key="{objectParts>id}" text="{objectParts>text}"/>
-        	</Select>
+					<layout:Grid hSpacing="1">
+						<layout:content>
+							<Label text="Object Part" class="inputLabel">
+								<layoutData>
+		          		<layout:GridData span="L3 M4 S12" linebreakS="true"/>
+		        		</layoutData>
+							</Label>
+							<Select selectedKey="{currentWorkOrder>/objectPart}" items="{objectParts>/data}" width="100%">
+								<layoutData>
+		          		<layout:GridData span="L3 M7 S12" linebreakS="true"/>
+		        		</layoutData>
+		          	<core:Item key="{objectParts>id}" text="{objectParts>text}"/>
+		        	</Select>
 
-					<Label text="Cause code" class="inputLabel">
-						<layoutData>
-          		<layout:GridData span="L3 M4 S12" linebreakS="true"/>
-        		</layoutData>
-					</Label>
-					<Select selectedKey="{currentWorkOrder>/causeCode}" items="{causeCodes>/data}" class="selectElements">
-						<layoutData>
-          		<layout:GridData span="L3 M7 S12" linebreakS="true"/>
-        		</layoutData>
-          	<core:Item key="{causeCodes>id}" text="{causeCodes>text}"/>
-        	</Select>
+							<Label text="Cause code" class="inputLabel">
+								<layoutData>
+		          		<layout:GridData span="L3 M4 S12" linebreakS="true"/>
+		        		</layoutData>
+							</Label>
+							<Select selectedKey="{currentWorkOrder>/causeCode}" items="{causeCodes>/data}" width="100%">
+								<layoutData>
+		          		<layout:GridData span="L3 M7 S12" linebreakS="true"/>
+		        		</layoutData>
+		          	<core:Item key="{causeCodes>id}" text="{causeCodes>text}"/>
+		        	</Select>
 
-					<Label text="Damage" class="inputLabel">
-						<layoutData>
-          		<layout:GridData span="L3 M4 S12" linebreakS="true"/>
-        		</layoutData>
-					</Label>
-					<Select selectedKey="{currentWorkOrder>/damage}" items="{damage>/data}" class="selectElements">
-						<layoutData>
-          		<layout:GridData span="L3 M7 S12" linebreakS="true"/>
-        		</layoutData>
-          	<core:Item key="{damage>id}" text="{damage>text}"/>
-        	</Select>
+							<Label text="Damage" class="inputLabel">
+								<layoutData>
+		          		<layout:GridData span="L3 M4 S12" linebreakS="true"/>
+		        		</layoutData>
+							</Label>
+							<Select selectedKey="{currentWorkOrder>/damage}" items="{damage>/data}" width="100%">
+								<layoutData>
+		          		<layout:GridData span="L3 M7 S12" linebreakS="true"/>
+		        		</layoutData>
+		          	<core:Item key="{damage>id}" text="{damage>text}"/>
+		        	</Select>
 
-					<Label text="Breakdown duration" class="inputLabel">
-						<layoutData>
-          		<layout:GridData span="L3 M4 S12" linebreakS="true"/>
-        		</layoutData>
-					</Label>
-					<Input placeholder="time" value="{currentWorkOrder>/breakdownDuration}">
-						<layoutData>
-          		<layout:GridData span="L1 M4 S4"/>
-        		</layoutData>
-					</Input>
-					<Select selectedKey="{currentWorkOrder>/breakdownDurationUnit}" items="{units>/data}" class="unitsSelect">
-						<layoutData>
-          		<layout:GridData span="L2 M4 S4"/>
-        		</layoutData>
-          	<core:Item key="{units>id}" text="{units>text}"/>
-        	</Select>
+							<Label text="Breakdown duration" class="inputLabel">
+								<layoutData>
+		          		<layout:GridData span="L3 M4 S12" linebreakS="true"/>
+		        		</layoutData>
+							</Label>
+							<Input placeholder="time" value="{currentWorkOrder>/breakdownDuration}" width="100%">
+								<layoutData>
+		          		<layout:GridData span="L1 M4 S6"/>
+		        		</layoutData>
+							</Input>
+							<Select selectedKey="{currentWorkOrder>/breakdownDurationUnit}" items="{units>/data}" width="100%">
+								<layoutData>
+		          		<layout:GridData span="L2 M4 S6"/>
+		        		</layoutData>
+		          	<core:Item key="{units>id}" text="{units>text}"/>
+		        	</Select>
 				</layout:content>
 			</layout:Grid>
 			<Panel>
