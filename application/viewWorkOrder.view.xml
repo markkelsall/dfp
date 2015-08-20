@@ -72,31 +72,6 @@
         	</Select>
 				</layout:content>
 			</layout:Grid>
-			<!-- <HBox>
-        <items>
-					<Label text="Object Part" class="inputLabel"/>
-					<Select selectedKey="{currentWorkOrder>/objectPart}" items="{objectParts>/data}" class="selectElements">
-          	<core:Item key="{objectParts>id}" text="{objectParts>text}"/>
-        	</Select>
-					<Label text="Cause code" class="inputLabel"/>
-					<Select selectedKey="{currentWorkOrder>/causeCode}" items="{causeCodes>/data}" class="selectElements">
-          	<core:Item key="{causeCodes>id}" text="{causeCodes>text}"/>
-        	</Select>
-				</items>
-			</HBox>
-			<HBox>
-        <items>
-					<Label text="Damage" class="inputLabel"/>
-					<Select selectedKey="{currentWorkOrder>/damage}" items="{damage>/data}" class="selectElements">
-          	<core:Item key="{damage>id}" text="{damage>text}"/>
-        	</Select>
-					<Label text="Breakdown duration" class="inputLabel"/>
-					<Input placeholder="time" class="inputElement" value="{currentWorkOrder>/breakdownDuration}"/>
-					<Select selectedKey="{currentWorkOrder>/breakdownDurationUnit}" items="{units>/data}" class="unitsSelect">
-          	<core:Item key="{units>id}" text="{units>text}"/>
-        	</Select>
-				</items>
-			</HBox> -->
 			<Panel>
 				<headerToolbar>
           <Toolbar height="3rem">
