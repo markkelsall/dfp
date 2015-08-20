@@ -81,7 +81,7 @@
 				<content>
 					<List items="{currentWorkOrder>/operations}" noDataText="No operations" select="onOperationItemPress" mode="SingleSelectMaster">
 	          <items>
-	            <ObjectListItem title="{currentWorkOrder>operation}" number="{currentWorkOrder>duration} {currentWorkOrder>unit}">
+	            <ObjectListItem title="{currentWorkOrder>operationId}" number="{currentWorkOrder>duration} {currentWorkOrder>unit}">
 								<attributes>
         					<ObjectAttribute text="{currentWorkOrder>workCentre}"/>
 									<ObjectAttribute text="{currentWorkOrder>dateString}"/>
