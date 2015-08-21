@@ -20,36 +20,36 @@
 				<layout:content>
 					<Label text="Object Part" class="inputLabel">
 						<layoutData>
-							<layout:GridData span="L2 M4 S12" linebreakS="true"/>
+							<layout:GridData span="L2 M4 S12"/>
 						</layoutData>
 					</Label>
 					<Select selectedKey="{currentWorkOrder>/objectPart}" items="{objectParts>/data}" width="100%">
 						<layoutData>
-							<layout:GridData span="L4 M7 S12" linebreakS="true"/>
+							<layout:GridData span="L4 M7 S12"/>
 						</layoutData>
 						<core:Item key="{objectParts>id}" text="{objectParts>text}"/>
 					</Select>
 
 					<Label text="Cause code" class="inputLabel">
 						<layoutData>
-							<layout:GridData span="L2 M4 S12" linebreakS="true"/>
+							<layout:GridData span="L2 M4 S12"/>
 						</layoutData>
 					</Label>
 					<Select selectedKey="{currentWorkOrder>/causeCode}" items="{causeCodes>/data}" width="100%">
 						<layoutData>
-							<layout:GridData span="L4 M7 S12" linebreakS="true"/>
+							<layout:GridData span="L4 M7 S12"/>
 						</layoutData>
 						<core:Item key="{causeCodes>id}" text="{causeCodes>text}"/>
 					</Select>
 
 					<Label text="Damage" class="inputLabel">
 						<layoutData>
-							<layout:GridData span="L2 M4 S12" linebreakS="true"/>
+							<layout:GridData span="L2 M4 S12"/>
 						</layoutData>
 					</Label>
 					<Select selectedKey="{currentWorkOrder>/damage}" items="{damage>/data}" width="100%">
 						<layoutData>
-							<layout:GridData span="L4 M7 S12" linebreakS="true"/>
+							<layout:GridData span="L4 M7 S12"/>
 						</layoutData>
 						<core:Item key="{damage>id}" text="{damage>text}"/>
 					</Select>
@@ -72,7 +72,7 @@
 					</Select>
 				</layout:content>
 			</layout:Grid>
-			<Panel>
+			<Panel expandable="true" expanded="true">
 				<headerToolbar>
           <Toolbar height="3rem">
             <Text text="Operations"/>
@@ -89,6 +89,29 @@
 	            </ObjectListItem>
 	          </items>
 	        </List>
+				</content>
+			</Panel>
+			<Panel expandable="true" expanded="true">
+				<headerToolbar>
+          <Toolbar height="3rem">
+            <Text text="First Operation"/>
+          </Toolbar>
+				</headerToolbar>
+				<content>
+					<layout:Grid hSpacing="1">
+						<layout:content>
+							<Label text="Operation" class="inputLabel">
+								<layoutData>
+									<layout:GridData span="L2 M4 S12"/>
+								</layoutData>
+							</Label>
+							<Input placeholder="First Operation Text" value="{currentWorkOrder>/firstOperationText}" width="100%">
+								<layoutData>
+									<layout:GridData span="L10 M8 S12"/>
+								</layoutData>
+							</Input>
+						</layout:content>
+					</layout:Grid>
 				</content>
 			</Panel>
     </content>
