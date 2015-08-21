@@ -63,7 +63,15 @@ sap.ui.controller("application.viewWorkOrder", {
 		sap.ui.getCore().setModel(jEditConfirmTimeState, "editConfirmTimeState");
 	},
 
-	onAddConfirmTimePress : function () {
+	onOperationItemPress : function (evt) {
+		var operation = evt.getSource().getSelectedItem().getBindingContext("currentWorkOrder").getObject();
+
+		var sapDate = sap.ui.core.format.DateFormat.getDateInstance({pattern : "dd/MM/YYYY"});
+		operation.date = sapDate.parse(operation.dateString, false);
+
+		var jEditConfirmTime = new sap.ui.model.json.JSONModel(operation);
+		sap.ui.getCore().setModel(jEditConfirmTime, "editConfirmTime");
+
 		if (!viewWorkOrderController.addConfirmTimeFragment) {
 			viewWorkOrderController.addConfirmTimeFragment = new sap.ui.xmlfragment("application.fragments.addConfirmTime", this);
     }

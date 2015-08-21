@@ -12,6 +12,10 @@
   padding-top: 1rem;
 }
 
+.unitsSelect {
+  margin-left:1rem !important;
+}
+
 .sapMPanelContent {
   padding:0rem !important;
 }

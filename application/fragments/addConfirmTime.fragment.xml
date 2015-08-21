@@ -13,7 +13,7 @@
       <HBox>
         <items>
           <Label text="Post Date" class="confirmTimeFragmentInputLabel"/>
-          <DatePicker placeholder="Enter Date" valueFormat="MMM dd, yy" value="{path:'editConfirmTime>/date', type:'sap.ui.model.type.Date'}"
+          <DatePicker placeholder="Enter Date" valueFormat="dd MMM yy" value="{path:'editConfirmTime>/date', type:'sap.ui.model.type.Date'}"
              class="confirmTimeFragmentInput" valueState="{editConfirmTimeState>/date}"/>
         </items>
       </HBox>
@@ -27,7 +27,8 @@
       <HBox>
         <items>
           <Label text="Work Centre" class="confirmTimeFragmentInputLabel"/>
-          <Input placeholder="Work Centre" value="{editConfirmTime>/workCentre}" valueState="{editConfirmTimeState>/workCentre}"/>
+          <Input placeholder="Work Centre" value="{editConfirmTime>/workCentre}" valueState="{editConfirmTimeState>/workCentre}"
+            class="confirmTimeFragmentInput"/>
         </items>
       </HBox>
     </content>

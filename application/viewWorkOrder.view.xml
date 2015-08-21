@@ -118,7 +118,6 @@
 		<footer>
       <Toolbar>
 				<ToolbarSpacer/>
-        <!-- <Button text="Add time" press="onAddConfirmTimePress" type="Emphasized"/> -->
         <Button text="Save" press="onSaveWorkOrderPress" type="Emphasized"/>
 				<Button text="Technically Complete" press="onTechnicallyCompleteWorkOrderPress" type="Accept"/>
       </Toolbar>
