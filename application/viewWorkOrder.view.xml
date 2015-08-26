@@ -79,9 +79,9 @@
           </Toolbar>
 				</headerToolbar>
 				<content>
-					<List items="{currentWorkOrder>/operations}" noDataText="No operations" select="onOperationItemPress" mode="SingleSelectMaster">
+					<List items="{currentWorkOrder>/operations}" noDataText="No operations">
 	          <items>
-	            <ObjectListItem title="{currentWorkOrder>operationId}" number="{currentWorkOrder>duration} {currentWorkOrder>unit}">
+	            <ObjectListItem title="{currentWorkOrder>operationId}" type="Active" number="{currentWorkOrder>duration} {currentWorkOrder>unit}" press="onOperationItemPress">
 								<attributes>
         					<ObjectAttribute text="{currentWorkOrder>workCentre}"/>
 									<ObjectAttribute text="{currentWorkOrder>dateString}"/>

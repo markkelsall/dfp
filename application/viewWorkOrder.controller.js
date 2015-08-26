@@ -64,7 +64,7 @@ sap.ui.controller("application.viewWorkOrder", {
 	},
 
 	onOperationItemPress : function (evt) {
-		var operation = evt.getSource().getSelectedItem().getBindingContext("currentWorkOrder").getObject();
+		var operation = evt.getSource().getBindingContext("currentWorkOrder").getObject();
 
 		var sapDate = sap.ui.core.format.DateFormat.getDateInstance({pattern : "dd/MM/YYYY"});
 		operation.date = sapDate.parse(operation.dateString, false);
